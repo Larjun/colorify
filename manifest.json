@@ -3,7 +3,14 @@
     "name": "Colorify",
     "description": "High visibility and colorblind extension for Chrome",
     "version": "1.0.0",
-    "icons": {"128": "tempicon.png"},
+    "content_scripts": [
+        {
+            "matches": ["<all_urls>"],
+            "js": ["script.js"],
+            "css": ["page-style.css"]
+        }
+    ],
+    "icons": {"128": "logo-1.png"},
     "browser_action": {
         "default_icon": "tempicon.png",
         "default_popup": "index.html"   
