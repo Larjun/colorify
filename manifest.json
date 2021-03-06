@@ -1,0 +1,12 @@
+{
+    "manifest_version": 2,
+    "name": "Colorify",
+    "description": "High visibility and colorblind extension for Chrome",
+    "version": "1.0.0",
+    "icons": {"128": "tempicon.png"},
+    "browser_action": {
+        "default_icon": "tempicon.png",
+        "default_popup": "index.html"   
+    },
+    "permissions": ["activeTab"]
+}
