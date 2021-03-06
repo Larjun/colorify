@@ -1,0 +1,12 @@
+.logo-icon {
+    width: 50px;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+.flex {
+    opacity: 1;
+    transition: opacity 0.2 ease-in-out;
+}
