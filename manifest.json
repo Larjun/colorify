@@ -12,7 +12,7 @@
     ],
     "icons": {"128": "logo-1.png"},
     "browser_action": {
-        "default_icon": "tempicon.png",
+        "default_icon": "logo-1.png",
         "default_popup": "index.html"   
     },
     "permissions": ["activeTab"]

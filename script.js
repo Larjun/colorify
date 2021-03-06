@@ -1,9 +1,65 @@
-var all = document.getElementsByTagName("*")
-var max = all.length
-for(var i = 0;i < max;i++){
-    //all[i].style="opacity: 0%"
-    // var bgColor = all[i].style.background-color
-    // var color = all[i].style="color"
-    // console.log(bgColor)
-    // console.log(color)
-}
+
+//console.log(matches.values)
+
+
+    var all = document.getElementsByTagName("*")
+    var max = all.length
+    //var matches = document.querySelectorAll("*");   
+    for(var i = 0;i < max;i++){
+        //all[i].style="opacity: 0%"
+        // var bgColor = all[i].style.background-color
+        // var color = all[i].style="color"
+        // console.log(bgColor)
+        // console.log(color)
+        var all = document.getElementsByTagName("*")
+        var max = all.length
+        
+        var style = getComputedStyle(all[i])
+        //all[i].style = all[i].style + ";filter: grayscale(100%);"
+        all[i].style = all[i].style + ";filter: contrast(200%);filter: saturate(2);"
+    
+        //style.filter = "saturate(4)"
+        //console.log(style.backgroundColor)
+    
+        //background-color: rgb(255,0,0);color: rgb(255,0,0);filter: saturate(2);
+    }
+
+
+
+
+// function contrast() {
+//     var all = document.getElementsByTagName("*")
+//     var max = all.length
+//     var matches = document.querySelectorAll("*");   
+//     for(var i = 0;i < max;i++){
+//         //all[i].style="opacity: 0%"
+//         // var bgColor = all[i].style.background-color
+//         // var color = all[i].style="color"
+//         // console.log(bgColor)
+//         // console.log(color)
+//         var all = document.getElementsByTagName("*")
+//         var max = all.length
+        
+//         var style = getComputedStyle(all[i])
+//         //all[i].style = all[i].style + ";filter: grayscale(100%);"
+//         all[i].style = all[i].style + ";filter: contrast(200%);"
+    
+//         //style.filter = "saturate(4)"
+//         //console.log(style.backgroundColor)
+    
+//         //background-color: rgb(255,0,0);color: rgb(255,0,0);filter: saturate(2);
+//     }
+// }
+
+// window.onload = function () {
+//     var button = document.getElementById("myBtn1")
+//     console.log(button.innerHTML)
+//     button.onclick = contrast()
+// }
+// window.onload = function () {
+//     document.getElementById("myBtn2").onclick = grayScale()
+// }
+// window.onload = function () {
+//     document.getElementById("myBtn3").onclick = grayScale()
+// }
+//document.getElementById("myBtn").addEventListener("click", grayScale);
