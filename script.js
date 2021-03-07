@@ -9,8 +9,13 @@ function gotMessage(message, sender, sendResponse) {
         document.body.style = document.body.style + ";filter: saturate(5000%);"
     } else if (message.txt == "none") {
         document.body.style = document.body.style + ";filter: none;"
+        location.reload()
     } else if (message.txt == "highVis") {
         para = document.querySelectorAll("p");
+        div = document.querySelectorAll("div");
+        for (let i = 0; i < div.length; i++) {
+            div[i].style = div[i].style + ";color: #f000f0;";
+        }
         for (let i = 0; i < para.length; i++) {
             para[i].style = para[i].style + ";color: #00f0f0;";
         }
@@ -54,8 +59,13 @@ function gotMessage(message, sender, sendResponse) {
         for (let i = 0; i < div.length; i++) {
             div[i].style.backgroundColor = "#000000";
         }
-        
+        table = document.querySelectorAll("tbody");
+        for (let i = 0; i < table.length; i++) {
+            table[i].style = table[i].style + ";color: #00F0F0;";
+            table[i].style.backgroundColor = "#000000";
+        }
+
         document.body.style.backgroundColor = "#000000";
-        document.body.style = document.body.style + ";filter: saturate(5000%)";
+        document.body.style = document.body.style + ";filter: saturate(100%)";
     }
 }
