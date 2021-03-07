@@ -1,68 +1,78 @@
-var all = document.getElementsByTagName("*")
-var max = all.length
-for (var i = 0; i < max; i++) {
-    //all[i].style="opacity: 0%"
-    // var bgColor = all[i].style.background-color
-    // var color = all[i].style="color"
-    // console.log(bgColor)
-    // console.log(color)
-}
-
-// function changeclr(clr) {
-//     if (clr == "red") {
-//         document.body.style.backgroundColor = "red";
-//     } else if (clr == "green") {
-//         document.body.style.backgroundColor = "green";
-//     } else { clr == "blue"
-//    document.body.style.backgroundColor = "blue";
+//console.log(matches.values)
+console.log("Content is running");
+//alert("Clicked");
+// chrome.runtime.onMessage.addListner(gotMessage);
+// function gotMessage(message, sender, sendResponse) {
+//     alert("clicked");
+//     var all = document.getElementsByTagName("*")
+//     var max = all.length
+//     //var matches = document.querySelectorAll("*");   
+//     for (var i = 0; i < max; i++) {
+//         //all[i].style="opacity: 0%"
+//         // var bgColor = all[i].style.background-color
+//         // var color = all[i].style="color"
+//         // console.log(bgColor)
+//         // console.log(color)
+//         var all = document.getElementsByTagName("*")
+//         var max = all.length
+//     
+//         var style = getComputedStyle(all[i])
+//         //all[i].style = all[i].style + ";filter: grayscale(100%);"
+//         //all[i].style = all[i].style + ";filter: contrast(200%); filter: saturate(2);"
+//         //document.body.style.background = "#000";
+//         //style.filter = "saturate(4)"
+//         //console.log(style.backgroundColor)
+//     
+//         //background-color: rgb(255,0,0);color: rgb(255,0,0);filter: saturate(2);
 //     }
 // }
 
-// function changeclr() {
-//     var script = 'document.body.style.backgroundColor="red";';
-//     // See https://developer.chrome.com/extensions/tabs#method-executeScript.
-//     // chrome.tabs.executeScript allows us to programmatically inject JavaScript
-//     // into a page. Since we omit the optional first argument "tabId", the script
-//     // is inserted into the active tab of the current window, which serves as the
-//     // default.
-//     chrome.tabs.executeScript({
-//         code: script
-//     });
+chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+    console.log(msg);
+    if (msg.command == "changeClr") {
+        var all = document.getElementsByTagName("*");
+        for (var i = 0; i < all.length; i++) {
+            all[i].style = all[i].style + ";filter: contrast(200%); filter: saturate(2);"
+        }
+    }
+
+});
+
+
+
+// function contrast() {
+//     var all = document.getElementsByTagName("*")
+//     var max = all.length
+//     var matches = document.querySelectorAll("*");   
+//     for(var i = 0;i < max;i++){
+//         //all[i].style="opacity: 0%"
+//         // var bgColor = all[i].style.background-color
+//         // var color = all[i].style="color"
+//         // console.log(bgColor)
+//         // console.log(color)
+//         var all = document.getElementsByTagName("*")
+//         var max = all.length
+
+//         var style = getComputedStyle(all[i])
+//         //all[i].style = all[i].style + ";filter: grayscale(100%);"
+//         all[i].style = all[i].style + ";filter: contrast(200%);"
+
+//         //style.filter = "saturate(4)"
+//         //console.log(style.backgroundColor)
+
+//         //background-color: rgb(255,0,0);color: rgb(255,0,0);filter: saturate(2);
+//     }
 // }
 
-// let changeColor = document.getElementById("changeclr");
-// 
-// // When the button is clicked, inject setPageBackgroundColor into current page
-// changeColor.addEventListener("click", async () => {
-//     let [tab] = await chrome.tabs.query({
-//         active: true,
-//         currentWindow: true
-//     });
-// 
-//     chrome.scripting.executeScript({
-//         target: {
-//             tabId: tab.id
-//         },
-//         function: setPageBackgroundColor,
-//     });
-// });
-// 
-// // The body of this function will be executed as a content script inside the
-// // current page
-// function setPageBackgroundColor() {
-//     var script = 'document.body.style.backgroundColor="red";';
-//     // See https://developer.chrome.com/extensions/tabs#method-executeScript.
-//     // chrome.tabs.executeScript allows us to programmatically inject JavaScript
-//     // into a page. Since we omit the optional first argument "tabId", the script
-//     // is inserted into the active tab of the current window, which serves as the
-//     // default.
-//     chrome.tabs.executeScript({
-//         code: script
-//     });
+// window.onload = function () {
+//     var button = document.getElementById("myBtn1")
+//     console.log(button.innerHTML)
+//     button.onclick = contrast()
 // }
-
-document.addEventListener('click', () => changeClr());
-
-function changeClr() {
-    document.body.style.backgroundColor = "red";
-}
+// window.onload = function () {
+//     document.getElementById("myBtn2").onclick = grayScale()
+// }
+// window.onload = function () {
+//     document.getElementById("myBtn3").onclick = grayScale()
+// }
+//document.getElementById("myBtn").addEventListener("click", grayScale);
