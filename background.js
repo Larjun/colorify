@@ -29,6 +29,21 @@ function saturate(){
         chrome.tabs.sendMessage(tabs[0].id,msg);
     }
 }
+function highVis(){
+    console.log("high visibility func called")
+    let params = {
+        active: true,
+        currentWindow: true
+    }
+    chrome.tabs.query(params,gotTabs)
+    function gotTabs(tabs){
+        // let message = input
+        let msg = {
+            txt: "highVis"
+        }
+        chrome.tabs.sendMessage(tabs[0].id,msg);
+    }
+}
 function none(){
     console.log("none func called")
     let params = {
@@ -48,8 +63,10 @@ window.onload=function(){
     var button1 = document.getElementById("myBtn1")
     var button2 = document.getElementById("myBtn2")
     var button3 = document.getElementById("myBtn3")
+    var button4 = document.getElementById("myBtn4")
     button1.addEventListener("click", gray)
     button2.addEventListener("click", saturate)
     button3.addEventListener("click",none)
+    button4.addEventListener("click",highVis)
 }
 
