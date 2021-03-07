@@ -14,7 +14,7 @@ function gotMessage(message, sender, sendResponse) {
         para = document.querySelectorAll("p");
         div = document.querySelectorAll("div");
         for (let i = 0; i < div.length; i++) {
-            div[i].style = div[i].style + ";color: #f000f0;";
+            div[i].style = div[i].style + ";color: #ff00ff;";
         }
         for (let i = 0; i < para.length; i++) {
             para[i].style = para[i].style + ";color: #00f0f0;";
