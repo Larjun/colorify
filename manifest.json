@@ -18,5 +18,5 @@
         "default_icon": "logo-1.png",
         "default_popup": "index.html"   
     },
-    "permissions": ["storage", "activeTab", "tabs"]
+    "permissions": [ "activeTab", "tabs", "storage"]
 }

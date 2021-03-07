@@ -27,7 +27,7 @@ console.log("Content is running");
 //     }
 // }
 
-chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
+chrome.runtime.onMessage.addListener((msg, sender, response) => {
     console.log(msg);
     if (msg.command == "changeClr") {
         var all = document.getElementsByTagName("*");
