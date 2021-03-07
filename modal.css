@@ -1,5 +1,5 @@
 .logo-icon {
-    width: 40%;
+    width: 50%;
     margin: 0 auto;
 }
 
@@ -24,8 +24,16 @@
     border-style: none;
     margin: 3px;
     text-align: center;
+    background-color: whitesmoke;
+    color: rgb(0, 0, 150);
+    font-size: 20px;
+    letter-spacing: 1px;
 }
 
 .container-fluid {
     padding: 5px 5px;
+}
+
+body {
+    background-color: whitesmoke;
 }
