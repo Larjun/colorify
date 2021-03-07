@@ -1,9 +1,5 @@
 .logo-icon {
-    width: 40px;
-}
-
-.logo {
-    font-size: 30px;
+    width: 40%;
     margin: 0 auto;
 }
 
@@ -27,6 +23,7 @@
 .modal-content {
     border-style: none;
     margin: 3px;
+    text-align: center;
 }
 
 .container-fluid {
