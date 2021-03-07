@@ -6,8 +6,8 @@
     "content_scripts": [
         {
             "matches": ["<all_urls>"],
-            "js": ["script.js"],
-            "css": ["page-style.css"]
+            "js": ["script.js"]
+            
         }
     ],
     "icons": {"128": "logo-1.png"},
@@ -16,7 +16,7 @@
     },
     "browser_action": {
         "default_icon": "logo-1.png",
-        "default_popup": "index.html"   
+        "default_popup": "index.html"
     },
     "permissions": [ "activeTab", "tabs", "storage"]
 }

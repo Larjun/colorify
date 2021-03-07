@@ -1,12 +1,32 @@
 .logo-icon {
-    width: 50px;
+    width: 40px;
+}
+
+.logo {
+    font-size: 30px;
+    margin: 0 auto;
+}
+
+.version {
+    font-size: 10px;
 }
 
 .flex-container {
     display: flex;
     justify-content: space-between;
+    
 }
 .flex {
     opacity: 1;
     transition: opacity 0.2 ease-in-out;
+    margin: 2px 3px;
+}
+
+.modal-content {
+    border-style: none;
+    margin: 3px;
+}
+
+.container-fluid {
+    padding: 5px 5px;
 }
